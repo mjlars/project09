@@ -7,21 +7,26 @@ generates a readme
 
 ## Installation
 
-Install dependencies with npm install then run the application using node index.js
+npm i then use node index.js to start
 
 
 ## Technologies Used
 
-node
+node.js
 
 
 ## Screenshot of Generated Document
 
-![Generated Readme Screenshot](./images/screenshot.JPG "Generated Readme Screenshot")
+![Generated Readme Screenshot](https://user-images.githubusercontent.com/34934109/155893014-0c22c295-441e-402c-946a-e1b3e0143f48.JPG "Generated Readme Screenshot")
+
 
 ## Link to video walkthrough
 
-https://watch.screencastify.com/v/zETkSdyHu6sja48xsX3p
+
+https://user-images.githubusercontent.com/34934109/155893042-0ad08801-1386-4e8d-9417-9e51348b1838.mp4
+
+
+
 
 ## License
 
