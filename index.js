@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
 
 const inquirer = require('inquirer');
-const renderLicenseBadge = require('./utils/generateLicenseBadge');
-const generateMarkdownFile = require('./utils/generateMarkdownFile');
+const renderLicense = require('./utils/generateLicense');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 
@@ -12,13 +12,13 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'What is the name of your project (Required)',
+            message: 'Project Name?',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
                 }
                 else {
-                    console.log('Please enter a name for your project!');
+                    console.log('Come on, come up with a project name');
                     return false;
                 }
             }
@@ -28,13 +28,13 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Enter a short description for your project (Required)',
+            message: 'Project Description?',
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
                 }
                 else {
-                    console.log('Please enter a short description for your project!')
+                    console.log('Enter a project description')
                     return false;
                 }
             }
@@ -44,21 +44,21 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'installation',
-            message: 'Please enter installation instructions for your project (required)'
+            message: 'Enter instructions to install and run the app'
         },
 
         // How the application is designed to be used
         {
             type: 'input',
             name: 'usage',
-            message: 'Describe how the application is designed to be used'
+            message: 'Enter app usage/functionality for end users'
         },
 
         // license information
         {
             type: 'list',
             name: 'license',
-            Message: 'Please select a license for your project (required)',
+            Message: 'Select a License',
             choices: [
                 'MIT',
                 'Apache',
@@ -70,28 +70,28 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'contributing',
-            message: 'Describe how contributions can be made to the project'
+            message: 'Describe how to make your own contributions to the project'
         },
 
         // How to make tests for the app
         {
             type: 'input',
             name: 'tests',
-            message: 'Please enter test instructions for your project (required)'
+            message: 'Enter testing instructions/setup for the project'
         },
 
         // Where to direct questions about the app
         {
             type: 'input',
             name: 'email',
-            message: 'Enter an email address where questions can be asked'
+            message: 'Enter and email for questions to be sent'
         },
 
         // Name of github repository
         {
             type: 'input',
             name: 'github',
-            message: 'Enter the name of the repository'
+            message: 'Enter the name of the github repo'
         },
 
         // Screenshot of readme
@@ -105,14 +105,14 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'runApplication',
-            message: 'Enter the command prompt to start the app locally'
+            message: 'enter command prompt input to start project locally'
         },
 
         // link to deployed application
         {
             type: 'input',
             name: 'liveLink',
-            message: 'Enter the link to your deployed app. if you dont have one, leave empty'
+            message: 'Enter the link to your deployed app, if applicable'
         },
     ])
 }
@@ -120,15 +120,11 @@ const promptUser = () => {
 
 promptUser()
     .then((data) =>{
-        return renderLicenseBadge(data);
+        return renderLicense(data);
     })
     .then((data) =>{
-        return generateMarkdown(data);;
+        return markdownGenerator(data);
     })
     .then(markdown => {
-        generateReadme(markdown);
+        readmeGenerator(markdown);
     })
-
-    // 3) What was the motivation for this project?
-    // 4) Provide a link to the GitHub repository.
-    // 5) 

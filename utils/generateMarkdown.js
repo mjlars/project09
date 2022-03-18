@@ -7,7 +7,7 @@ generateLiveLink = liveLink => {
     }
     else {
         return `
-## Link to Live URL
+## Live Project URL
 
 ${liveLink}
         `
@@ -15,19 +15,10 @@ ${liveLink}
     }
 }
 
-generateMarkdown = (data) => {
+markdownGenerator = (data) => {
     const { name, description, screenshot, runApplication, liveLink, badge, usage, email, github, contributing, test} = data;
-    return `# License
-
-${badge}
-
-
+    return `
 # ${name}
-
-
-## Description
-
-${description}
 
 
 ## Table of Contents
@@ -45,27 +36,31 @@ ${description}
 * [Questions](#questions)
 
 
-## Installation
+## Description
+
+${description}
+
+## Project Installation
 
 ${runApplication}
 
 
-## Usage
+## End Usage
 
 ${usage}
 
 
-## Contributing
+## How to contribute
 
 ${contributing}
 
 
-## Testing
+## Testing Setup
 
 ${test}
 
 
-## Screenshot of Generated Document
+## Screenshot
 
 ![Generated Readme Screenshot](${screenshot} "Generated Readme Screenshot")
 
@@ -74,11 +69,16 @@ ${generateLiveLink(liveLink)}
 
 ## Questions
 
-Send questions to email ${email} or check out my [GitHub profile.](www.github.com/${github})
-    `
+Send questions to ${email} or check out my [GitHub profile.](www.github.com/${github})
+
+
+# License
+
+${badge}
+`
 }
 
-generateReadme = markDown => {
+readmeGenerator = markDown => {
     fs.writeFile('./dist/readme.md', markDown, err => {
         if (err) {
             reject(err);
@@ -87,4 +87,4 @@ generateReadme = markDown => {
     })
 }
 
-module.exports = {generateMarkdown, generateReadme};
+module.exports = {markdownGenerator, readmeGenerator};
