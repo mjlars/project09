@@ -9,16 +9,13 @@ generateLiveLink = liveLink => {
         return `
 ## Live Project URL
 
-${liveLink}
-        `
-
+${liveLink}`
     }
 }
 
 markdownGenerator = (data) => {
     const { name, description, screenshot, runApplication, liveLink, badge, usage, email, github, contributing, test} = data;
-    return `
-# ${name}
+    return `# ${name}
 
 
 ## Table of Contents

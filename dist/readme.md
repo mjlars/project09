@@ -1,4 +1,3 @@
-
 # Readme Generator
 
 
@@ -19,7 +18,7 @@
 
 ## Description
 
-this app uses the command line to generate a simple readme file for github repos
+generate simple readme for a project
 
 ## Project Installation
 
@@ -28,12 +27,12 @@ node index.js
 
 ## End Usage
 
-provide a quick way to make a good looking readme for any github repo
+just generating readmes
 
 
 ## How to contribute
 
-fork the project and make any changes you would like
+fork the project and make your changes
 
 
 ## Testing Setup
@@ -43,18 +42,17 @@ undefined
 
 ## Screenshot
 
-./dist/images/screenshot.JPG
+![Generated Readme Screenshot](/readme "Generated Readme Screenshot")
 
 
 ## Live Project URL
 
-N/A
-        
+n/a
 
 
 ## Questions
 
-Send questions to maflarson@gmail.com or check out my [GitHub profile.](www.github.com/https://github.com/mjlars/project09)
+Send questions to maflarson@gmail.com or check out my [GitHub profile.](www.github.com/project09)
 
 
 # License
