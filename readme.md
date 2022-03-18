@@ -1,33 +1,61 @@
 # Readme Generator
 
+
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [Contributing](#contributing)
+
+* [Testing](#testing)
+
+* [Screenshot](#screenshot)
+
+* [Questions](#questions)
+
+
 ## Description
 
-generates a readme
+this app uses the command line to generate a simple readme file for github repos
+
+## Project Installation
+
+node index.js
 
 
-## Installation
+## End Usage
 
-npm i then use node index.js to start
-
-
-## Technologies Used
-
-node.js
+provide a quick way to make a good looking readme for any github repo
 
 
-## Screenshot of Generated Document
+## How to contribute
 
-![Generated Readme Screenshot](https://user-images.githubusercontent.com/34934109/155893014-0c22c295-441e-402c-946a-e1b3e0143f48.JPG "Generated Readme Screenshot")
-
-
-## Link to video walkthrough
+fork the project and make any changes you would like
 
 
-https://user-images.githubusercontent.com/34934109/155893042-0ad08801-1386-4e8d-9417-9e51348b1838.mp4
+## Testing Setup
+
+undefined
 
 
+## Screenshot
+
+./dist/images/screenshot.JPG
 
 
-## License
+## Live Project URL
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+N/A
+        
+
+
+## Questions
+
+Send questions to maflarson@gmail.com or check out my [GitHub profile.](www.github.com/https://github.com/mjlars/project09)
+
+
+# License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) This project covered under the MIT license.
